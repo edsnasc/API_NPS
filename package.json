@@ -6,10 +6,12 @@
   "author": "edsnasc <edsnascimento89@gmail.com>",
   "license": "MIT",
   "scripts": {
-    "dev": "ts-node-dev --transpile-only --ignore-watch node_modules src/server.ts"
+    "dev": "ts-node-dev --transpile-only --ignore-watch node_modules src/server.ts",
+    "typeorm": "ts-node-dev node_modules/typeorm/cli.js"
   },
   "dependencies": {
     "express": "^4.17.1",
+    "mysql2": "^2.3.0",
     "reflect-metadata": "^0.1.13",
     "tsc": "^2.0.3",
     "typeorm": "^0.2.37"
