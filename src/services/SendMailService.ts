@@ -1,5 +1,6 @@
 import nodemailer, { Transporter } from 'nodemailer'
-import { SendMailController } from '../controllers/SendMailController';
+import handlebars from 'handlebars';
+import fs from 'fs';
 
 class SendMailService {
     private client: Transporter;
@@ -20,11 +21,18 @@ class SendMailService {
         })
     }
 
-    async execute(to: string, subject: string, body: string) {
-        const message =await this.client.sendMail({
+    async execute(to: string, subject: string, variables: object, path: string) {
+        
+        const templateFileContent = fs.readFileSync(path).toString("utf8");
+
+        const mailTemplateParse = handlebars.compile(templateFileContent);
+
+        const html = mailTemplateParse(variables);
+
+        const message = await this.client.sendMail({
             to,
             subject,
-            html: body,
+            html,
             from: "NPS <noreplay@nps.com.br>"
         })
 
