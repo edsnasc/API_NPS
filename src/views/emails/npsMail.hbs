@@ -6,62 +6,109 @@
         align-content: center;
         display: flex;
         flex-direction: column;
+
+        font-size: 20px;
+        color: #Fff;
+
+        background: linear-gradient(to right, rgb(0, 0, 0), rgb(67, 67, 67));
+    }
+
+    .header{
+        margin-top: 5px;
     }
 
     .value {
         padding: 10px;
+        margin-left: 5px;
         background: #8257e6;
         color: #fff;
-        border-radius: 6px;
-        width: 15px;
+        width: 100px;
+	    border-radius: 50%;
+	    overflow: hidden;
+        transition: 1s ease;
+        
+        font-size: 30px;
         text-align: center;
         text-decoration: none;
     }
 
+    .value:hover{
+	transform: rotateY(360deg);
+}
+
     .level{
         display: flex;
-        margin: 10px;
         justify-content: space-between;
-        width: 350px;
+
+        width: 600px;
+        margin-top: 10px;
+        margin-bottom: 5px;
     }
 
-    .answer{
-        width: 350px;
+    span {
+        color: green;
+    }
+
+    span:first-child {
+        color: red;
+    }
+
+    .answers{
+        width: 600px;
         display: flex;
         justify-content: space-between;
     }
+
+    footer {
+        align-items: center;
+        align-content: center;
+        display: flex;
+        flex-direction: column;
+    }
+
+    footer > h3 {
+        color: #4A235A;
+    }
+
+    @keyframes .value {
+	from {
+		transform: rotate(0deg) translateX(30px);
+	} to {
+		transform: rotate(360deg) translateX(30px);
+	}
+}
 </style>
 
 
 <div class="container">
-    <label>Olá <strong>{{name}}</strong>! Tudo bem?</label>
+    <label class="header">Olá <strong>{{name}}</strong>! Tudo bem?</label>
 
     <h3>{{title}}</h3>
     <br>
     <strong>{{description}}</strong>
 
     <div class="level">
-        <span>Pouco provável</span>
-        <span>Muito provável</span>
+        <span>👎Pouco provável</span>
+        <span>👍Muito provável</span>
     </div>
 
     <div class="answers">
-        <a class="value" href="{{link}}/1?u={{id}}">1</a>
-        <a class="value" href="{{link}}/2?u={{id}}">2</a>
-        <a class="value" href="{{link}}/3?u={{id}}">3</a>
-        <a class="value" href="{{link}}/4?u={{id}}">4</a>
-        <a class="value" href="{{link}}/5?u={{id}}">5</a>
-        <a class="value" href="{{link}}/6?u={{id}}">6</a>
-        <a class="value" href="{{link}}/7?u={{id}}">7</a>
-        <a class="value" href="{{link}}/8?u={{id}}">8</a>
-        <a class="value" href="{{link}}/9?u={{id}}">9</a>
+        <a class="value" href="{{link}}/1?u={{id}}">01</a>
+        <a class="value" href="{{link}}/2?u={{id}}">02</a>
+        <a class="value" href="{{link}}/3?u={{id}}">03</a>
+        <a class="value" href="{{link}}/4?u={{id}}">04</a>
+        <a class="value" href="{{link}}/5?u={{id}}">05</a>
+        <a class="value" href="{{link}}/6?u={{id}}">06</a>
+        <a class="value" href="{{link}}/7?u={{id}}">07</a>
+        <a class="value" href="{{link}}/8?u={{id}}">08</a>
+        <a class="value" href="{{link}}/9?u={{id}}">09</a>
         <a class="value" href="{{link}}/10?u={{id}}">10</a>
 
     </div>
 
     <br>
-    <br>
-
+<footer>
     <strong>Sua opnião é muito importante para nós</strong>
-    <h3>Equipe | <strong>NLW</strong></h3>
+    <h3>Equipe | <strong>NLW 🚀</strong></h3>
+</footer>
 </div>
