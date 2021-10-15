@@ -41,7 +41,10 @@ Subtrair a porcentagem de Detratores da porcentagem de Promotores resulta no Net
 # Preview 🛰
 
 <p align="center">
-  <img alt="kne" src="https://media.giphy.com/media/PQKPZWPDS06XgH7RT4/giphy.gif" width="60%">
+  <img alt="npsgif" src="https://media.giphy.com/media/PQKPZWPDS06XgH7RT4/giphy.gif" width="60%">
+</p>
+<p align="center">
+  <img alt="npsimg" src="./github/npsimg.png" width="100%">
 </p>
 
 ## 🚀 Technology
